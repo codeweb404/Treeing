@@ -1,5 +1,5 @@
-// src/components/FileRenaming.js
-import React from 'react';
+
+import PropTypes from 'prop-types';
 
 function FileRenaming({ onNavigate }) {
   return (
@@ -18,5 +18,10 @@ function FileRenaming({ onNavigate }) {
     </div>
   );
 }
+
+// PropTypes validation
+FileRenaming.propTypes = {
+  onNavigate: PropTypes.func.isRequired, // onNavigate is a required function
+};
 
 export default FileRenaming;

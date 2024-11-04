@@ -1,5 +1,5 @@
-// src/components/FinalConfirm.js
-import React from 'react';
+
+import PropTypes from 'prop-types';
 
 function FinalConfirm({ onNavigate }) {
   return (
@@ -18,5 +18,10 @@ function FinalConfirm({ onNavigate }) {
     </div>
   );
 }
+
+// PropTypes validation
+FinalConfirm.propTypes = {
+  onNavigate: PropTypes.func.isRequired, // onNavigate is a required function
+};
 
 export default FinalConfirm;

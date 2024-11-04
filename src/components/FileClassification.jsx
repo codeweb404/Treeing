@@ -1,5 +1,6 @@
 // src/components/FileClassification.js
-import React from 'react';
+
+import PropTypes from 'prop-types';
 
 function FileClassification({ onNavigate }) {
   return (
@@ -14,5 +15,10 @@ function FileClassification({ onNavigate }) {
     </div>
   );
 }
+
+// PropTypes validation
+FileClassification.propTypes = {
+  onNavigate: PropTypes.func.isRequired, // onNavigate is a required function
+};
 
 export default FileClassification;
