@@ -8,11 +8,11 @@
     ],
     "action": {
       "default_popup": "index.html",
-      "default_icon": "treeing-icon.png"
+      "default_icon": "KakaoTalk_20241022_232511992.jpg"
     },
 
     "icons": {
-      "48": "treeing-icon.png"
+      "48": "KakaoTalk_20241022_232511992.jpg"
     }
   }
   
