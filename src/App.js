@@ -12,10 +12,8 @@ const App = () => {
           <Menu.Item key="1">Home</Menu.Item>
         </Menu>
       </Header>
-      <Content style={{ padding: '50px' }}>
-        <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
-          File Naming App Placeholder
-        </div>
+      <Content>
+        <FileRenamerHome/>
       </Content>
       <Footer style={{ textAlign: 'center' }}>
         Google Drive File Naming App ©2024
