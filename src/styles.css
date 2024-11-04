@@ -63,4 +63,38 @@
   .file-item input[type="checkbox"] {
     margin-right: 8px;
   }
+
+  .final-confirm {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .file-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .file-list th, .file-list td {
+    border: 2px solid #007bff; /* Change color as needed */
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .file-list th {
+    background-color: #e7f3ff; /* Light blue for header */
+    font-weight: bold;
+  }
+  
+  .file-list td {
+    background-color: #ffffff; /* White for cells */
+  }
+  
+  .file-list img {
+    max-width: 100px; /* Ensure the image fits well */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
   
