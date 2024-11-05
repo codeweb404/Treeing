@@ -6,18 +6,15 @@ import FileRenaming from './components/FileRenaming';
 import FinalConfirm from './components/FinalConfirm';
 import SuccessPage from './components/SuccessPage';
 import FileClassification from './components/FileClassification';
-import AuthorizeAPI from './components/AuthorizeAPI';
 import './styles.css';
 
 const { Content} = Layout;
 
 function App() {
-  const [page, setPage] = useState('authorize'); // 기본 페이지를 'landing'으로 설정
+  const [page, setPage] = useState('landing'); // 기본 페이지를 'landing'으로 설정
 
   const renderPage = () => {
     switch (page) {
-      case 'authorize':
-        return <AuthorizeAPI onNavigate={setPage}/>;
       case 'landing':
         return <LandingPage onNavigate={setPage} />;
       case 'fileRenaming':
@@ -41,7 +38,6 @@ function App() {
           {renderPage()}
         </div>
       </Content>
-
     </Layout>
   );
 }
