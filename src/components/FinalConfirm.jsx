@@ -76,7 +76,7 @@ function FinalConfirm({ onNavigate }) {
           ))}
         </tbody>
       </table>
-      <button onClick={() => onNavigate('fileClassification')}>Final Confirm</button>
+      <button onClick={() => onNavigate('successPage')}>Final Confirm</button>
     </div>
   );
 }
