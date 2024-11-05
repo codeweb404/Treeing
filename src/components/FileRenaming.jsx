@@ -19,7 +19,6 @@ function FileRenaming({ onNavigate }) {
       <h2>File Renaming</h2>
       <select className="file-select">
         <option>Select from Google Drive</option>
-        {/* Add options dynamically if needed */}
       </select>
       <div className="selected-files">
         {selectedFiles.map(file => (

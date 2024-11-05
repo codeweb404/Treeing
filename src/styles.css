@@ -1,7 +1,7 @@
 /* src/styles.css */
 body {
-  width: 400px;
-  height: 300px;
+  width: 480px;
+  height: 400px;
 }
 .app-container {
     display: flex;
@@ -21,17 +21,21 @@ body {
 
   }
   
-  h1, h2 {
+  h1 {
     margin-bottom: 20px;
+    font-size: 40px;
   }
-  
+  h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }  
   button {
     background-color: #333;
     color: white;
     padding: 10px 20px;
     margin-top: 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
   }
@@ -46,8 +50,8 @@ body {
     justify-content: space-between;
     padding: 10px;
     background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: 1px solid #515151;
+    border-radius: 8px;
     margin-top: 10px;
   }
   
@@ -57,7 +61,8 @@ body {
   
   .remove-btn {
     cursor: pointer;
-    color: red;
+    color: rgb(2, 2, 2);
+    font-weight: bold;
   }
   
   .selected-files, .file-list {
@@ -68,26 +73,26 @@ body {
     margin-right: 8px;
   }
 
-  .final-confirm {
-    padding: 20px;
-    border-radius: 8px;
-
-  }
-  
   .file-list {
-    width: 80%; /* Adjust the width as needed (e.g., 300px for fixed width) */
+    width: 100%; /* Keep this width or adjust as needed */
     border-collapse: collapse;
     margin-top: 20px;
     margin-left: auto;
-    margin-right: auto; /* Center the table if smaller than parent */
+    margin-right: auto; /* Center the table */
   }
   
-  
   .file-list th, .file-list td {
-    border: 2px solid #000000a2; /* Change color as needed */
+    border: 2px solid #000000a2;
     padding: 12px;
     text-align: left;
-    
+    word-wrap: break-word; /* Allow text to wrap within cells */
+    word-break: break-all; /* Force long words to break */
+  }
+  
+  .final-confirm {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align content within the container */
   }
   
   .file-list th {
@@ -98,4 +103,59 @@ body {
   .file-list td {
     background-color: #ffffff; /* White for cells */
   }
+
+  .file-confirm-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .file-each-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  
+  .file-name-name {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .file-preview {
+    font-size: 14px;
+    color: #555;
+    margin-top: 4px;
+  }
+  
+  /* Pencil icon styling */
+  .file-name-name .PencilIcon {
+    margin-left: 8px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .file-name-name input[type="text"] {
+    font-size: 16px;
+    width: 100%;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .file-name-name input[type="text"]:focus {
+    outline: none;
+    border-color: #333;
+  }
+
   

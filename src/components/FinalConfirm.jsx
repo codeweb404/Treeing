@@ -12,70 +12,57 @@ const PencilIcon = ({ onClick }) => (
 PencilIcon.propTypes = {
   onClick: PropTypes.func.isRequired, // onClick is a required function
 };
-
 function FinalConfirm({ onNavigate }) {
-  // State to manage the list of files
   const [files, setFiles] = useState([
-    { id: 1, name: 'Robot_Display_Setup'}, 
-    { id: 2, name: 'KMLA_OnlineDB_Diagram'},
-    // Add more items if needed
+    { id: 1, name: 'Robot_Display_Setup', preview: 'IMG_5543.jpg' },
+    { id: 2, name: 'KMLA_OnlineDB_Diagram', preview: 'IMG_5974.jpg' },
+    { id: 3, name: 'Graduation Photo 2022', preview: 'IMG_6832.jpg' },
+    { id: 4, name: 'DEFCON Brochure', preview: 'IMG_2342.jpg' },
+    { id: 5, name: 'DEFCON Promo Photo', preview: 'IMG_9248.jpg' },
   ]);
 
-  // State to manage the currently editing file
   const [editingFileId, setEditingFileId] = useState(null);
   const [newFileName, setNewFileName] = useState('');
 
-  // Function to handle file name edit
   const handleEditClick = (file) => {
     setEditingFileId(file.id);
     setNewFileName(file.name);
   };
 
-  // Function to save the new file name
   const handleSaveClick = (fileId) => {
     setFiles(files.map(file =>
       file.id === fileId ? { ...file, name: newFileName } : file
     ));
-    setEditingFileId(null); // Exit editing mode
-    setNewFileName(''); // Clear input
+    setEditingFileId(null);
+    setNewFileName('');
   };
 
   return (
     <div className="final-confirm">
       <h2>Final Confirm</h2>
-      <table className="file-list">
-        <thead>
-          <tr>
-            <th>File Name</th>
-            <th>File Preview</th>
-          </tr>
-        </thead>
-        <tbody>
-          {files.map(file => (
-            <tr key={file.id}>
-              <td>
-                {editingFileId === file.id ? (
-                  <input
-                    type="text"
-                    value={newFileName}
-                    onChange={(e) => setNewFileName(e.target.value)}
-                    onBlur={() => handleSaveClick(file.id)} // Save on blur
-                    onKeyPress={(e) => e.key === 'Enter' && handleSaveClick(file.id)} // Save on Enter key
-                  />
-                ) : (
-                  <span style={{ display: 'flex', alignItems: 'center' }}>
-                    {file.name}
-                    <PencilIcon onClick={() => handleEditClick(file)} />
-                  </span>
-                )}
-              </td>
-              <td>
-                <img alt={file.name}/>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="file-confirm-list">
+        {files.map(file => (
+          <div key={file.id} className="file-each-item">
+            <div className="file-name-name">
+              {editingFileId === file.id ? (
+                <input
+                  type="text"
+                  value={newFileName}
+                  onChange={(e) => setNewFileName(e.target.value)}
+                  onBlur={() => handleSaveClick(file.id)}
+                  onKeyPress={(e) => e.key === 'Enter' && handleSaveClick(file.id)}
+                />
+              ) : (
+                <span onClick={() => handleEditClick(file)}>
+                  {file.name}
+                </span>
+              )}
+              <PencilIcon onClick={() => handleEditClick(file)} />
+            </div>
+            <div className="file-preview">{file.preview}</div>
+          </div>
+        ))}
+      </div>
       <button onClick={() => onNavigate('successPage')}>Final Confirm</button>
     </div>
   );
