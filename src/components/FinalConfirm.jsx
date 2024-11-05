@@ -70,7 +70,7 @@ function FinalConfirm({ onNavigate }) {
                 )}
               </td>
               <td>
-                <img src={file.image} alt={file.name} width="100" />
+                <img alt={file.name}/>
               </td>
             </tr>
           ))}

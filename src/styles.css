@@ -1,4 +1,8 @@
 /* src/styles.css */
+body {
+  width: 400px;
+  height: 300px;
+}
 .app-container {
     display: flex;
     justify-content: center;
@@ -72,29 +76,27 @@
   }
   
   .file-list {
-    width: 100%;
+    width: 80%; /* Adjust the width as needed (e.g., 300px for fixed width) */
     border-collapse: collapse;
     margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto; /* Center the table if smaller than parent */
   }
   
+  
   .file-list th, .file-list td {
-    border: 2px solid #007bff; /* Change color as needed */
+    border: 2px solid #000000a2; /* Change color as needed */
     padding: 12px;
     text-align: left;
+    
   }
   
   .file-list th {
-    background-color: #e7f3ff; /* Light blue for header */
+    background-color: #e9f0f7; /* Light blue for header */
     font-weight: bold;
   }
   
   .file-list td {
     background-color: #ffffff; /* White for cells */
   }
-  
-  .file-list img {
-    max-width: 100px; /* Ensure the image fits well */
-    height: auto; /* Maintain aspect ratio */
-  }
-  
   
