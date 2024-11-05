@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 // Pencil Icon Component
 const PencilIcon = ({ onClick }) => (
   <span onClick={onClick} style={{ cursor: 'pointer', marginLeft: '8px' }}>
-    ✏️ {/* You can replace this with an SVG or a Font Awesome icon */}
+    ✏️ 
   </span>
 );
 
@@ -16,8 +16,8 @@ PencilIcon.propTypes = {
 function FinalConfirm({ onNavigate }) {
   // State to manage the list of files
   const [files, setFiles] = useState([
-    { id: 1, name: 'Robot_Display_Setup', image: 'path/to/IMG_5543.jpg' },
-    { id: 2, name: 'KMLA_OnlineDB_Diagram', image: 'path/to/IMG_5974.jpg' },
+    { id: 1, name: 'Robot_Display_Setup'}, 
+    { id: 2, name: 'KMLA_OnlineDB_Diagram'},
     // Add more items if needed
   ]);
 
