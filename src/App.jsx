@@ -4,6 +4,7 @@ import { Layout, Menu } from 'antd';
 import LandingPage from './components/LandingPage';
 import FileRenaming from './components/FileRenaming';
 import FinalConfirm from './components/FinalConfirm';
+import SuccessPage from './components/SuccessPage';
 import FileClassification from './components/FileClassification';
 import AuthorizeAPI from './components/AuthorizeAPI';
 import './styles.css';
@@ -25,6 +26,8 @@ function App() {
         return <FinalConfirm onNavigate={setPage} />;
       case 'fileClassification':
         return <FileClassification onNavigate={setPage} />;
+      case 'successPage':
+        return <SuccessPage onNavigate={setPage} />
       default:
         return <LandingPage onNavigate={setPage} />;
     }

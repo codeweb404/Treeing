@@ -1,5 +1,6 @@
 // src/components/LandingPage.js
-import React from 'react';
+
+import PropTypes from 'prop-types';
 
 function LandingPage({ onNavigate }) {
   return (
@@ -10,5 +11,10 @@ function LandingPage({ onNavigate }) {
     </div>
   );
 }
+
+// PropTypes validation
+LandingPage.propTypes = {
+  onNavigate: PropTypes.func.isRequired, // onNavigate is a required function
+};
 
 export default LandingPage;
